@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Steel Pipe Manufacturer (2021) – Interactive VSM Case Study</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero card">
+    <div>
+      <span class="badge">Interactive case study</span>
+      <h1>Steel Pipe Manufacturer (2021)<br>Interactive VSM Case Study</h1>
+      <p class="sub">Based on <em>Using Value Stream Mapping to Eliminate Waste: A Case Study of a Steel Pipe Manufacturer</em> by Salwin et al. (2021), <em>Energies</em>. Explore the production process, inspect workstations and review selected KPIs from the paper.</p>
+      <div class="pills"><span>Value Stream Mapping</span><span>Smart manufacturing</span><span>Manufacturing data</span><span>KPIs by workstation</span></div>
+      <div class="callout"><strong>How to use:</strong> select any workstation below. Switch between <strong>Current State</strong> and <strong>Improvement Insights</strong> to compare the baseline process with the VSM-driven improvements reported in the paper.</div>
+    </div>
+    <div>
+      <h2>Headline KPIs</h2>
+      <div class="metrics">
+        <div class="metric"><small>Total order fulfilment time</small><strong>35 days</strong><span>Current-state end-to-end lead time.</span></div>
+        <div class="metric"><small>Value-added time</small><strong>100 min</strong><span>Only a small share of total fulfilment time.</span></div>
+        <div class="metric"><small>Slitting line OEE</small><strong id="headlineOee">65.91%</strong><span id="headlineOeeText">Before improvement.</span></div>
+        <div class="metric"><small>Productivity potential</small><strong>+17%</strong><span>One additional roll per shift after Kaizen 1.</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="toggle"><button id="currentBtn" class="active">Current State</button><button id="improvedBtn">Improvement Insights</button></div>
+    <p>The process flow stays the same; the information panel changes according to the selected view.</p>
+  </div>
+  <div id="modeNote" class="mode-note"><strong>Improvement mode:</strong> the paper reports explicit improvement data mainly for the <strong>Slitting line</strong> and <strong>Coil packing</strong>.</div>
+
+  <main class="layout">
+    <section class="card process">
+      <h2>Steel pipe production process</h2>
+      <p class="muted">Select a stage to inspect its description, KPIs and improvement opportunities.</p>
+      <div id="flow" class="flow" aria-label="Steel pipe production process flow"></div>
+      <div class="legend"><span><i class="dot baseline"></i>Production stage</span><span><i class="dot target"></i>Reported improvement focus</span></div>
+    </section>
+
+    <aside class="card panel">
+      <div class="eyebrow">Selected station</div>
+      <div id="stationIcon" class="station-icon">⚙️</div>
+      <h2 id="stationTitle">Slitting line</h2>
+      <p id="stationSubtitle" class="muted"></p>
+      <div id="kpis" class="kpis"></div>
+      <h3>Main activities</h3><div id="activities"></div>
+      <h3>Typical issues / observations</h3><div id="issues"></div>
+      <div class="student-box"><strong>Your task</strong><p>Identify <strong>2–3 concrete opportunities for digitalization and improvement</strong> at this stage. Consider what data should be collected, useful KPIs and how information could support decisions.</p></div>
+    </aside>
+  </main>
+
+  <section class="card tasks">
+    <h2>Activity for the 1st practical class</h2>
+    <div class="task-grid">
+      <article><b>1. Understand the process</b><p>Reconstruct the flow and identify value-added and non-value-added activities.</p></article>
+      <article><b>2. Identify problems</b><p>Look for waiting, inventory, transport, changeovers, quality losses and manual handling.</p></article>
+      <article><b>3. Define data & KPIs</b><p>Decide what should be measured at the most relevant stages.</p></article>
+      <article><b>4. Digitalization opportunities</b><p>Propose 2–3 specific improvements for the stages you analyse.</p></article>
+      <article><b>5. Connect data to decisions</b><p>Explain how collected data could support monitoring and decision-making.</p></article>
+      <article><b>6. A4 synthesis</b><p>Summarise process, problems, required data, KPIs, digitalization opportunities and conclusion.</p></article>
+    </div>
+  </section>
+
+  <footer>Source: Salwin, M., Jacyna-Gołda, I., Bańka, M., Varanchuk, D., & Gavina, A. (2021). <em>Using Value Stream Mapping to Eliminate Waste: A Case Study of a Steel Pipe Manufacturer</em>. Energies, 14(12), 3527.</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
